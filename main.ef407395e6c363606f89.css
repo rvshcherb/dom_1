@@ -1,0 +1,37 @@
+*, *::before, *::after
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.field {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 400px;
+  background-color: yellow;
+}
+
+.cell {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  border: 2px solid black;
+}
+
+.cell.target {
+  background-image: url(assets/2dbd01ce16c0fa83cb67.png);
+  background-size: contain;
+}
+
+/*# sourceMappingURL=main.ef407395e6c363606f89.css.map*/
