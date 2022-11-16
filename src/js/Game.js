@@ -2,10 +2,18 @@ export default class Game {
   constructor(size) {
     this.fieldSize = size;
     this.targetCell = undefined;
+    this.field = null;
+    this.game = document.querySelector('.game');
+  }
+
+  bindToDom() {
+    this.game.appendChild(this.field);
   }
 
   generateField() {
-    const field = document.querySelector('.field');
+    const field = document.createElement('div');
+    field.classList.add('field');
+    // this.field = document.querySelector('.field');
     let i = 0;
     while (i < this.fieldSize) {
       const cell = document.createElement('div');
@@ -13,6 +21,7 @@ export default class Game {
       field.appendChild(cell);
       i += 1;
     }
+    this.field = field;
   }
 
   startGame() {
@@ -24,10 +33,6 @@ export default class Game {
       cells.forEach((cell) => cell.classList.remove('target'));
       cells[this.targetCell].classList.add('target');
     }, 1000);
-
-    // cells[3].classList.add('red');
-
-    console.dir(cells);
   }
 
   createTargetCell() {
