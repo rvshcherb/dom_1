@@ -1,0 +1,1 @@
+# AHJ-45. Homework topic: DOM, Task: 1.

@@ -1,0 +1,29 @@
+*, *::before, *::after
+{
+    box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.field {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  background-color: yellow;
+}
+
+.cell {
+  box-sizing: border-box;
+  height: 100px;
+  flex-basis: 25%;
+  border: 2px solid black;
+}
+
+.cell.target {
+  background-image: url('../img/goblin.png');
+  background-size: contain;
+}
